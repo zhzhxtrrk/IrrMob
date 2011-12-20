@@ -1,0 +1,17 @@
+h2. Irrlicht for Mobile
+
+This is a branch of irrlicht working on iOS, android, Windows, Linux & MacOS X!
+
+For android both OpenGLES1 and OpenGLES2 drivers are ported but only GLES1 has been tested, GLES2 compiles ok, but not tested, I have no device to test this.
+
+For iOS there is only GLES1 driver works.
+
+h2. Build
+
+To build irrmob you should have CMake installed.
+
+For more information, please read the CMakeLists.txt youself, it is so simple to understand.
+
+h2. Have fun
+
+:
