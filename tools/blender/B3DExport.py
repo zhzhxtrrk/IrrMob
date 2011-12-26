@@ -620,15 +620,12 @@ def write_node(objects=[]):
                     print("        <rotation>", quat.w, quat.x, quat.y, quat.z, "</rotation>")
             
             if anim_data:
-                #Blender.Set("curframe",0)
-                #Blender.Window.Redraw()
-                #bpy.ops.anim.change_frame(frame=0)
-
                 the_scene.frame_set(1,subframe=0.0)
-
-                #data = arm.getData()
+                
                 arm_matrix = arm.matrix_world
-                #arm_matrix *= TRANS_MATRIX.inverted()
+                
+                if b3d_parameters.get("local-space"):
+                    arm_matrix = mathutils.Matrix()
                 
                 def read_armature(arm_matrix,bone,parent = None):
                     if (parent and not bone.parent.name == parent.name):
@@ -1039,7 +1036,10 @@ def write_node_mesh_vrts(obj, data, obj_count, arm_action, exp_root):
     
     the_scene.frame_set(1,subframe=0.0)
     
-    mesh_matrix = obj.matrix_world.copy()
+    if b3d_parameters.get("local-space"):
+        mesh_matrix = mathutils.Matrix()
+    else:
+        mesh_matrix = obj.matrix_world.copy()
     
     import time
     
