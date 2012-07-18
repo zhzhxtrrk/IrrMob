@@ -1,4 +1,6 @@
 h2. Irrlicht for Mobile
+(this project won't update any more, irrlicht has its official iOS support now and introducing GLES2 support)
+(if you want to build irrlicht for android, this project is just working well but won't update any more)
 
 This is a branch of irrlicht working on iOS, android, Windows, Linux & MacOS X!
 
