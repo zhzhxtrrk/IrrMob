@@ -3,6 +3,9 @@ h2. Irrlicht for Mobile
 (this project won't update any more, irrlicht has its official iOS support now and introducing GLES2 support)
 (if you want to build irrlicht for android, this project is just working well but won't update any more)
 
+(news: irrlicht has it's official android support now)
+
+
 This is a branch of irrlicht working on iOS, android, Windows, Linux & MacOS X!
 
 For android both OpenGLES1 and OpenGLES2 drivers are ported but only GLES1 has been tested, GLES2 compiles ok, but not tested, I have no device to test this.
